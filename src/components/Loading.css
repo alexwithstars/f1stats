@@ -1,0 +1,19 @@
+.loading{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    & > span{
+        display: block;
+        width: 15px;
+        height: 5px;
+        border-radius: 100vh;
+        background-color: #fff;
+        transform-origin: 0 0;
+        animation: load 1.2s var(--delay) alternate infinite ease-out;
+    }
+}
+@keyframes load {
+    to{
+        translate: 150%;
+    }
+}

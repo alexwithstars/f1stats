@@ -1,0 +1,80 @@
+.driver{
+    width: 250px;
+    background-color: hsl(240, 18%, 16%);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    cursor: default;
+}
+.driver-presentation{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: var(--back);
+    border-radius: 10px 10px 0 0;
+    mask-image: linear-gradient(#000 95%,#0000);
+    position: relative;
+    & > .driver-team-back, & > .driver-team-front{
+        position: absolute;
+        top: 10px;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        color: #0006;
+        font-family: f1-bold;
+        z-index: -1;
+        transition: opacity 0.3s;
+    }
+    & > .driver-team-front{
+        opacity: 0;
+        color: #fff;
+        z-index: 2;
+    }
+    &:hover > .driver-team-back{
+        opacity: 0;
+    }
+    &:hover > .driver-team-front{
+        opacity: 1;
+    }
+    & > .driver-img{
+        height: 93px;
+        aspect-ratio: 1;
+        z-index: 1;
+    }
+}
+.driver-info{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "number flag"
+    "name name"
+    "team team";
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    & > .driver-number{
+        grid-area: number;
+        font-family: f1-wide,sans-serif;
+        font-size: 28px;
+    }
+    & > .driver-flag{
+        grid-area: flag;
+        width: 64px;
+        height: 40px;
+        object-fit: fill;
+        border-radius: 5px;
+        justify-self: end;
+    }
+    & > .driver-name{
+        grid-area: name;
+        word-spacing: 100vw;
+        word-wrap: break-word;
+        font-family: f1;
+        font-size: 22px;
+    }
+}

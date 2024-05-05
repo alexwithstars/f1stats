@@ -1,0 +1,36 @@
+.session-card{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border: 2px solid #448;
+    box-shadow: 0 0 15px #448;
+    border-radius: 15px;
+    background-color: #0004;
+    flex-wrap: wrap;
+}
+.session-card-title{
+    flex-grow: 1;
+    font-family: f1;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+.date-display{
+    width: 10ch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid #448;
+    height: 100%;
+    padding: 10px 5px;
+    gap: 5px;
+}
+.date-display-day{
+    font-family: f1-bold;
+}
+.date-display-month{
+    font-family: f1-wide;
+}
+.date-display-time{
+    font-family: f1;
+}

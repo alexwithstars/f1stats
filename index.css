@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+:root{
+    --system:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@font-face {
+    font-family: 'F1';
+    src: url('src/fonts/Formula1-Regular.woff2') format('woff2'),
+    url('src/fonts/Formula1-Regular.woff') format('woff'),
+    url('src/fonts/Formula1-Regular.ttf') format('ttf');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'F1-Bold';
+    src: url('src/fonts/Formula1-Bold.woff2') format('woff2'),
+    url('src/fonts/Formula1-Bold.woff') format('woff'),
+    url('src/fonts/Formula1-Bold.ttf') format('ttf');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'F1-Wide';
+    src: url('src/fonts/Formula1-Wide.woff2') format('woff2'),
+    url('src/fonts/Formula1-Wide.woff') format('woff'),
+    url('src/fonts/Formula1-Wide.ttf') format('ttf');
+    font-display: swap;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Titillium-web';
+    src: url('src/fonts/TitilliumWeb-Regular.woff2') format('woff2'),
+    url('src/fonts/TitilliumWeb-Regular.woff') format('woff'),
+    url('src/fonts/TitilliumWeb-Regular.ttf') format('ttf');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#app{
+    min-height: 100dvh;
+    width: 100%;
+    background-color: #15151e;
+    font-family: var(--system);
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
