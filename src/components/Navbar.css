@@ -4,9 +4,9 @@
 
 .navbar{
     width: 100%;
-    height: 75px;  
+    height: var(--nav-height);
     background: #e00;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 20;
     display: flex;

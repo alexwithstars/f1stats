@@ -1,7 +1,6 @@
 *{
     padding: 0;
     margin: 0;
-    line-height: 1;
     box-sizing: border-box;
 }
 
@@ -49,13 +48,22 @@
     font-style: normal;
 }
 
-#app{
+body{
     min-height: 100dvh;
     width: 100%;
     background-color: #15151e;
     font-family: var(--system);
     color: #ddd;
+    position: relative;
     display: flex;
     flex-direction: column;
+}
+
+#app{
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
     position: relative;
+    --nav-height:75px;
+    padding-top: var(--nav-height);
 }
