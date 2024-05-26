@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import { F1Logo } from './assets/F1Logo'
 import { RestartIcon } from './assets/RestartIcon'
+import { useRef } from 'react'
 import './Home.css'
 
 export function Home () {
+  const video = useRef(null)
   const handleClick = () => {
-    const video = document.getElementById('background')
-    video.currentTime = 0
-    video.play()
+    video.current.currentTime = 0
+    video.current.play()
   }
   const restartText = 'Reiniciar animación'
   return (
@@ -28,7 +29,14 @@ export function Home () {
           </span>
         </button>
       </main>
-      <video id='background' className='background' src='f1-logo-animation-cut.mp4' type='video/mp4' autoPlay muted />
+      <video
+        ref={video}
+        className='background'
+        autoPlay
+        muted
+      >
+        <source src='f1-logo-animation-cut.mp4' type='video/mp4' />
+      </video>
     </>
   )
 }
