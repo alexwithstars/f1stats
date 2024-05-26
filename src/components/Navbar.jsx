@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { F1Logo } from '../assets/F1Logo'
 import './Navbar.css'
 import { useEffect, useState } from 'react'
-import { BASE_URL } from '../misc/constants'
 
 const LinkTo = ({ href, text, className }) => {
   const [classes, setClasses] = useState(
@@ -31,12 +30,12 @@ const LinkTo = ({ href, text, className }) => {
 export function Navabar () {
   const [classes, setClasses] = useState(
     `navbar ${
-      window.location.pathname === `${BASE_URL}/` ? 'hide' : ''
+      window.location.pathname === '/' ? 'hide' : ''
     }`
   )
   const updateClasses = (e) => {
     setClasses(`navbar ${
-      new URL(e.destination.url).pathname === `${BASE_URL}/` ? 'hide' : ''
+      new URL(e.destination.url).pathname === '/' ? 'hide' : ''
     }`)
   }
   useEffect(() => {
@@ -45,12 +44,12 @@ export function Navabar () {
   }, [])
   return (
     <nav className={classes}>
-      <Link to={`${BASE_URL}/`}>
+      <Link to='/'>
         <F1Logo className='navbar-logo' />
       </Link>
       <section className='links'>
-        <LinkTo href={`${BASE_URL}/races`} text='Carreras' className='link' />
-        <LinkTo href={`${BASE_URL}/drivers`} text='Pilotos' className='link' />
+        <LinkTo href='/races' text='Carreras' className='link' />
+        <LinkTo href='/drivers' text='Pilotos' className='link' />
       </section>
     </nav>
   )

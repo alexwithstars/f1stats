@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { F1Logo } from './assets/F1Logo'
 import { RestartIcon } from './assets/RestartIcon'
 import './Home.css'
-import { BASE_URL } from './misc/constants'
 
 export function Home () {
   const handleClick = () => {
@@ -19,8 +18,8 @@ export function Home () {
           <h1 className='home-title'>Stats</h1>
         </header>
         <footer className='home-links'>
-          <Link to={`${BASE_URL}/races`} className='home-link-button'>Carreras</Link>
-          <Link to={`${BASE_URL}/drivers`} className='home-link-button'>Pilotos</Link>
+          <Link to='/races' className='home-link-button'>Carreras</Link>
+          <Link to='/drivers' className='home-link-button'>Pilotos</Link>
         </footer>
         <button onClick={handleClick} className='restart'>
           <RestartIcon className='restart-icon' />
