@@ -3,6 +3,7 @@ import { Home } from './Home'
 import { Races } from './Races'
 import { Drivers } from './Drivers'
 import { Navabar } from './components/Navbar'
+import { NotFound } from './404'
 import './App.css'
 
 export default function App () {
@@ -13,6 +14,7 @@ export default function App () {
         <Route path='/' element={<Home />} />
         <Route path='/races' element={<Races />} />
         <Route path='/drivers' element={<Drivers />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   )
