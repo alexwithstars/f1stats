@@ -10,12 +10,14 @@ export default function App () {
   return (
     <>
       <Navabar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/races' element={<Races />} />
-        <Route path='/drivers' element={<Drivers />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      <main className='content'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/races' element={<Races />} />
+          <Route path='/drivers' element={<Drivers />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </main>
     </>
   )
 }

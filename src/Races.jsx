@@ -15,7 +15,7 @@ export function Races () {
   }
 
   return (
-    <main className='main-content'>
+    <>
       <header className='header'>
         <div className='header-background' />
         <h1 className='header-title'>Carreras</h1>
@@ -38,6 +38,6 @@ export function Races () {
           : <Loading />}
       </section>
       {targetMeeting && <RaceInfo meeting={targetMeeting} closeHandle={closeHandle} />}
-    </main>
+    </>
   )
 }
