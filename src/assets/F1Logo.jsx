@@ -1,6 +1,6 @@
-export function F1Logo ({ color, className }) {
+export function F1Logo (options) {
   return (
-    <svg color={color} xmlns='http://www.w3.org/2000/svg' width='120px' height='30px' viewBox='0 0 120 30' version='1.1' className={className}>
+    <svg {...options} xmlns='http://www.w3.org/2000/svg' width='120px' height='30px' viewBox='0 0 120 30' version='1.1'>
       <title>Logos / F1-logo</title>
       <desc>Created with Sketch.</desc>
       <defs>
