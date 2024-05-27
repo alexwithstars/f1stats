@@ -22,7 +22,6 @@
 
 .links{
     display: flex;
-    padding: 50px;
     gap: 30px;
 }
 
@@ -54,5 +53,65 @@
     background-color: #0004;
     &::before,&::after{
         width: 100%;
+    }
+}
+
+.menu{
+    display: none;
+    color: #fff;
+    height: 42px;
+    width: auto;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-links{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top: var(--nav-height);
+    min-height: 100dvh;
+    background-color: #b00;
+    position: fixed;
+    gap: 16px;
+    top: 0;
+    right: 0;
+    transition: translate 0.3s;
+    translate: 100% 0;
+    &.active{
+        box-shadow: -2px 0 10px #800;
+        translate: 0 0;
+    }
+}
+.menu-logo{
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+}
+.menu-link{
+    padding: 10 20px;
+    font-size: 18px;
+    background-color: #c11;
+    color: #fff;
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: f1,sans-serif;
+    transition: scale 0.2s;
+    &.active{
+        background-color: #f00;
+        scale: 1.05;
+    }
+}
+
+
+@media (width < 650px) {
+    .links{
+        display: none;
+    }
+    .menu{
+        display: block;
     }
 }
