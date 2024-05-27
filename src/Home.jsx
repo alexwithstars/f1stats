@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { F1Logo } from './assets/F1Logo'
 import { RestartIcon } from './assets/RestartIcon'
 import { useRef } from 'react'
+import { routes } from './misc/constants'
 import './Home.css'
 
 export function Home () {
@@ -19,8 +20,11 @@ export function Home () {
           <h1 className='home-title'>Stats</h1>
         </header>
         <footer className='home-links'>
-          <Link to='/races' className='home-link-button'>Carreras</Link>
-          <Link to='/drivers' className='home-link-button'>Pilotos</Link>
+          {Object.entries(routes).map(([href, text]) => (
+            <Link key={href} to={href} className='home-link-button'>
+              {text}
+            </Link>
+          ))}
         </footer>
         <button onClick={handleClick} className='restart'>
           <RestartIcon className='restart-icon' />
