@@ -29,5 +29,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px 50px;
-    padding: 0 50px;
+    padding: 0 50px 50px;
+}
+
+@media (width < 650px) {
+    .header-title{
+        font-size: 10vw;
+    }
 }

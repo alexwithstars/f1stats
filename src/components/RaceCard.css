@@ -30,7 +30,6 @@
 }
 .race-content-date{
     display: flex;
-    /* flex-direction: column; */
     gap: 8px;
     padding-bottom: var(--vPad);
     border-bottom: 1px solid #222;
@@ -69,4 +68,15 @@
 .race:hover > .arrow{
     translate: 8px;
     filter: drop-shadow(0 -10px #d008);
+}
+
+@media (width < 650px) {
+    .arrow{
+        display: none;
+    }
+    .race-content{
+        padding: 0;
+        padding-left: var(--hPad);
+        border-right: none;
+    }
 }
