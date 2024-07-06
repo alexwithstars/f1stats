@@ -3,6 +3,7 @@ import { RaceInfo } from './components/RaceInfo'
 import { RaceCard } from './components/RaceCard'
 import { Loading } from './components/Loading'
 import { useRaces } from './hooks/useRaces'
+import { SectionHeader } from './components/SectionHeader'
 import './Races.css'
 
 export function Races () {
@@ -16,10 +17,7 @@ export function Races () {
 
   return (
     <>
-      <header className='header'>
-        <div className='header-background' />
-        <h1 className='header-title'>Carreras</h1>
-      </header>
+      <SectionHeader title='Carreras' backgroundUrl='/f1banner.webp' />
       <section className='races'>
         {races.length > 0
           ? races.map(meeting => {
