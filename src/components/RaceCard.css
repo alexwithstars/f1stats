@@ -3,8 +3,8 @@
     align-items: center;
     border: 2px solid #fff;
     border-radius: 10px;
-    height: fit-content;
-    width: fit-content;
+    justify-content: space-between;
+    max-width: 375px;
     --hPad: 15px;
     padding: 8px var(--hPad);
     gap: var(--hPad);
@@ -71,6 +71,9 @@
 }
 
 @media (width < 650px) {
+    .race{
+        width: fit-content;
+    }
     .arrow{
         display: none;
     }
