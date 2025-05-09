@@ -2,12 +2,14 @@ import { convertIocCode } from 'convert-country-codes'
 
 export const getFlag = (cc, size = 64) => {
   const countryCode = convertIocCode(cc)?.iso2
+  if (!countryCode) return null
   if (![12, 24, 32, 48, 64].includes(size)) size = 64
   return `https://flagsapi.com/${countryCode}/flat/${size}.png`
 }
 
 export const getFlagCdn = (cc, size = 80) => {
   const countryCode = convertIocCode(cc)?.iso2
+  if (!countryCode) return null
   if (![20, 40, 80, 120].includes(size)) size = 80
   return `https://flagcdn.com/w${size}/${countryCode.toLowerCase()}.webp`
 }
