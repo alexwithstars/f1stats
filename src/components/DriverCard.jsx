@@ -1,8 +1,11 @@
+import { fallbackAvatarUrl } from '../misc/constants'
 import { getFlagCdn } from '../services/f1api'
 import './DriverCard.css'
 
 export function DriverCard ({ number, imgUrl, name, country, team, color }) {
-  const refinedImgUrl = imgUrl.replace(/1col/, '2col')
+  const refinedImgUrl = imgUrl?.replace(/1col/, '2col') ||
+  fallbackAvatarUrl
+
   return (
     <article className='driver' style={{ '--back': `#${color}` }}>
       <section className='driver-presentation'>
