@@ -7,21 +7,28 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "production" : "vite build && vite preview",
+    "production": "vite build && vite preview",
     "lint": "standard --fix"
   },
   "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react-swc": "^3.6.0",
-    "standard": "^17.1.0",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.8.3",
     "vite": "^5.2.0"
   },
   "dependencies": {
     "convert-country-codes": "^1.0.0",
+    "country-to-iso": "^1.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "zod": "^4.0.2"
   },
   "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
+    "extends": "./node_modules/ts-standard/eslintrc.json"
   }
 }
