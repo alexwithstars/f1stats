@@ -5,5 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true
+  },
+  build: {
+    commonjsOptions: { transformMixedEsModules: true } // Change
   }
 })

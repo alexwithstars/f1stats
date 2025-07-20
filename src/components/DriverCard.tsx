@@ -28,7 +28,6 @@ export const DriverCard: React.FC<DriverCardProps> = ({ driverV1, driver }) => {
     countryCode = convertIocCode(driverV1.country_code ?? '')?.iso2 ?? countryCode
     team = driverV1.team_name
     number = driverV1.driver_number.toString().padStart(2, '0')
-    console.log(number)
   }
 
   const flagUrl = getFlagCdn(countryCode ?? '') ?? fallbackFlagUrl
